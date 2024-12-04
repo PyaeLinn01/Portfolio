@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>about_img
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <title>Portfolio</title>
+    
+    <!-- CSS LINK  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- BOX ICONS CDN LINK -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Animate On Scroll Library CSS Link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  </head>
+  <body>
+        
+        <!-- Include the audio file -->
+        <audio id="mouse-click-sound" src="water.mp3"></audio>
+
+        
+
+    <button id="scrollUpBtn" class="scroll-up-btn"> <i class="fas fa-arrow-up"></i> </button>
+    <!-- NAVBAR  -->
+    <div class="navbar">
+      <div class="container">
+        <div class="nav">
+          <!-- logo  -->
+          <a href="/" class="logo">
+            <img src="images/aa.png" alt="logo-img" class="logo-img" />
+          </a>
+          <!-- links  -->
+          <ul class="links">
+            <li>
+              <a href="#" class="nav-link">home</a>
+            </li>
+            <li>
+              <a href="#about" class="nav-link">about</a>
+            </li>
+            <li>
+              <a href="#experiences" class="nav-link">experiences</a>
+            </li>
+            <li>
+              <a href="#skills" class="nav-link">skills</a>
+            </li>
+            <li>
+              <a href="#projects" class="nav-link">projects</a>
+            </li>
+          </ul>
+          <!-- toggle music button -->
+          <button class="toggle-music">
+            <i class="bx bx-music"></i>
+          </button>
+          
+          <audio id="background-music" src="arcane.mp3" loop></audio>
+
+          <!-- toggles  -->
+          <div class="toggles">
+            
+            <!-- toggle nav links  -->
+            <button class="toggle-links">
+              <i class="bx bx-menu"></i>
+            </button>
+            <!-- toggle contact right bar  -->
+            <button class="toggle-contact-right-bar">
+              <i class="bx bx-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACT RIGHT BAR  -->
+    <div class="contact-right-bar">
+      <div class="contact-header">
+        <!-- small logo  -->
+        <a href="/" class="small-logo">
+          <img
+            src="images/aa.png"
+            alt="small-logo-img"
+            class="small-logo-img"
+          />
+        </a>
+        <button class="circle-btn close-contact">
+          <i class="bx bx-x"></i>
+        </button>
+      </div>
+      <div class="contact-body">
+        <div class="top">
+          <h4 class="contact-title">about us</h4>
+          
+        </div>
+        <div class="bottom">
+          <h4 class="contact-title">get in touch</h4>
+          <!-- contact right bar form  -->
+          <form>
+            <div class="input-group">
+              <input
+                type="text"
+                required
+                placeholder="Your Name"
+                class="input-contact"
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="email"
+                required
+                placeholder="Your Email"
+                class="input-contact"
+              />
+            </div>
+            <div class="input-group">
+              <textarea
+                required
+                placeholder="Message"
+                class="message-contact"
+              ></textarea>
+            </div>
+            <div class="input-group">
+              <button type="submit" class="btn">Submit Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- BANNER -->
+    <section class="banner">
+      <div class="container">
+        <div class="row">
+          <!-- left column -->
+          <div class="text-col">
+            <h3 class="section-title">Hi, my name is</h3>
+            <span class="banner-heading">Pyae Linn<span>
+            <h1 class="banner-heading"><span class="typing"></span></h1>
+          
+             <!-- Social Media Links -->
+            <div class="social-links flex items-center gap-10">
+              <a href="https://mail.google.com/mail/u/0/#search/in%3Asent+pltlosgot%40gmail.com?compose=new" target="_blank" class="social-link">
+                <i class="bx bxl-gmail"></i>
+              </a>
+              <a href="https://github.com/PyaeLinn01" target="_blank" class="social-link">
+                <i class="bx bxl-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/pyae-linn-2419a62a4/" target="_blank" class="social-link">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://www.instagram.com/pyae_linn_/" target="_blank" class="social-link">
+                <i class="bx bxl-facebook"></i>
+              </a>
+              <a href="https://instagram.com/your-username" target="_blank" class="social-link">
+                <i class="bx bxl-instagram"></i>
+              </a>
+            </div>
+
+            <div class="btn-container">
+              <!-- Download CV Button -->
+              <a href="CV Form.pdf" class="btn download-btn flex items-center" download>
+                Download CV <i class="bx bx-download"></i>
+              </a>
+            </div>
+          </div>
+          <!-- right column -->
+          <div class="img-col">
+            <div class="img">
+              <img
+                src="images/profile.jpg"
+                alt="banner-img"
+                class="banner-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT  -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <!-- left column  -->
+          <div class="col-2">
+            <!-- title and subtitle -->
+            <h3 class="section-title">about me</h3>
+            
+            <div class="my-20">
+              <div class="flex gap-20">
+                <div class="line my-10"></div>
+                <div>
+                  
+                  <div class="my-40">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- right column  -->
+          <div class="col-2 text-right-lg-left" data-aos="fade-left">
+            <img src="images/profile1.jpg" alt="about-img" class="about-img" />
+          </div>
+        </div>
+      </div>
+    
+    <!-- SERVICES  -->
+    
+      <div class="container">
+        <!-- title and subtitle -->
+        
+        <div class="scroll-highlight">
+          <h5 class="section-subtitle-center" data-aos="fade-up">
+            I am a passionate AI enthusiast with expertise in NLP, Computer Vision, Machine Learning, and Deep Learning. 
+            A skilled Python programmer, I was part of the winning team at the Samsung Innovation Campus AI Hackathon 2024, 
+            focusing on AI-driven freshness detection. With a strong foundation in Java, C++, JavaScript, and web development, 
+            I am eager to contribute to innovative AI projects and deepen my expertise.
+          </h5>
+        </div>
+        
+      </div>
+    </section>
+    <!-- EDUCATION AND SKILLS -->
+    <section class="experiences" id="experiences">
+      <div class="container">
+        <!-- title and subtitle  -->
+        <h3 class="section-title text-center">Experiences</h3>
+        <h5 class="section-subtitle-center" data-aos="fade-up">
+          Experience is the teacher of all things.
+        </h5>
+        <!-- education list  -->
+        <div class="row">
+          <!-- column 1 -->
+          <div class="col-2" data-aos="fade-right">
+            <div class="education">
+              <a href="https://www.uit.edu.mm/" class="btn-outline">
+                University of Information of Technology
+              </a>
+              <h2>Education (2022 - 2027)</h2>
+              <p>
+                I am currently studying at UIT. My focus is on Computer Science, where I am gaining skills in programming, AI, and technology development. 
+              </p>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-2" data-aos="fade-left">
+            <div class="education">
+              <a href="https://www.facebook.com/share/p/knE4H2iTmeStThpm/?mibextid=oFDknk" class="btn-outline">
+                Winner of Samsung Innovation Campus
+              </a>
+              <h2>AI Hackathon</h2>
+              <p>
+                I was part of the winning team, IT Pout Sa, at the Samsung Innovation Campus AI
+                Hackathon 2024 in Myanmar, where we focused on fruit and vegetable freshness
+                detection with AI
+              </p>
+            </div>
+          </div>
+          <!-- column 3 -->
+          <div class="col-2" data-aos="fade-right">
+            <div class="education">
+              <a href="https://itpec.org/statsandresults/all-passers-information/Myanmar/2023A_IP.pdf" class="btn-outline">
+                Information Technology Passport Examination
+              </a>
+              <h2>Information
+                Technology Professional Examination Council </h2>
+              <p>
+                I passed the IP exam in 28 Dec 2023 | 
+                MMIP23A00547 Mr. Pyae Linn
+              </p>
+            </div>
+          </div>
+          <!-- column 4 -->
+          <div class="col-2" data-aos="fade-left">
+            <div class="education">
+              <a href class="btn-outline">
+                Certificate of Excellence Awarding institution: Samsung
+              </a>
+              <h2>
+                The 40-Hour Al Comprehensive Course 
+              </h2>
+              <p>
+                For the successful completion of the 40-Hour Al Comprehensive Course at the Samsung
+                Innovation Campus.
+                My commitment to mastering the Artificial Intelligence (AI) and Large Language Mod
+                (LLM) has been exemplary
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+      <!-- skills list -->
+      <section id="skills">
+        <div class="container">
+          <h3 class="section-title">My Skills</h3>
+          <p class="section-description">
+            Transforming ideas into expertise through continuous learning.
+          </p>
+      
+          <!-- Skill Categories -->
+          <div class="skill-categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="frontend">Frontend</button>
+            <button class="category-btn" data-category="backend">Backend</button>
+            <button class="category-btn" data-category="databases">Databases</button>
+            <button class="category-btn" data-category="other">Other</button>
+          </div>
+      
+          <!-- Skills Table -->
+          <div class="skills-grid">
+            <!-- Frontend Skills -->
+            <div class="skill-item" data-category="frontend">
+              <img src="icons/html1.png" alt="HTML Icon" />
+              
+            </div>
+            <div class="skill-item" data-category="frontend">
+              <img src="icons/css1" alt="CSS Icon" />
+             
+            </div>
+            <div class="skill-item" data-category="frontend">
+              <img src="icons/js2.png" alt="JavaScript Icon" />
+              
+            </div>
+      
+            <!-- Backend Skills -->
+            <div class="skill-item" data-category="backend">
+              <img src="icons/php.png" alt="PHP Icon" />
+              
+            </div>
+            <div class="skill-item" data-category="backend">
+              <img src="icons/python.png" alt="Python Icon" />
+              
+            </div>
+            <div class="skill-item" data-category="backend">
+              <img src="icons/apache" alt="Apache Icon" />
+             
+            </div>
+      
+            <!-- Database Skills -->
+            <div class="skill-item" data-category="databases">
+              <img src="icons/sql" alt="MySQL Icon" />
+              
+            </div>
+            <div class="skill-item" data-category="backend">
+              <img src="icons/java.png" alt="PostgreSQL Icon" />
+              
+            </div>
+      
+            <!-- Other Skills -->
+            <div class="skill-item" data-category="other">
+              <img src="icons/g" alt="PostgreSQL Icon" />  
+            </div>   
+            <div class="skill-item" data-category="other">
+              <img src="icons/github.png"/>
+              
+            </div>   
+                          
+          </div>
+        </div>
+      </section>
+      
+      
+    <!-- PROJECTS  -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <!-- title and subtitle  -->
+        <h3 class="section-title">Projects</h3>
+        <h5 class="section-subtitle-center" data-aos="fade-up">
+                          My Live Portfolio
+        </h5>
+        <!-- projects list  -->
+        <div class="flex justify-between flex-wrap my-50 gap-20">
+          <!-- column 1 -->
+          <div class="col-3xl" data-aos="fade-right">
+            <a href="https://reliefbuddy.streamlit.app" target="_blank" class="project-link">
+              <div class="project">
+                <img
+                  src="images/rbss.png"
+                  alt="project-img"
+                  class="project-img"
+                />
+                <div class="overlay">
+                  <div>
+                    <h2 style="color: #04c0efd4;">Relief Buddy</h2>
+                    <div class="flex items-center gap-20">
+                      <div class="line-green"></div>
+                      <p>AI-Powered Mental Support Chatbot</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- column 2 -->
+          <div class="col-1sm" data-aos="fade-left">
+          <a href="https://fresh-or-not.streamlit.app" target="_blank" class="project-link">
+            <div class="project">
+              <img
+                src="images/f.png"
+                alt="project-img"
+                class="project-img"
+              />
+              <div class="overlay">
+                <div>
+                  <h2 style="color: #04c0efd4;">Fresh or Not</h2>
+                  <div class="flex items-center gap-20">
+                    <div class="line-green"></div>
+                    <p>AI-Powered Fruit Freshness Detector</p>
+                  </div>
+                </div>
+              </div>
+          </a>
+            </div>
+          </div>
+          <!-- column 3 -->
+          <div class="col-2sm" data-aos="fade-right">
+            <a href="https://facecare.streamlit.app" target="_blank" class="project-link">
+              <div class="project">
+                <img
+                  src="images/skin.jpg"
+                  alt="project-img"
+                  class="project-img"
+                />
+                <div class="overlay">
+                  <div>
+                    <h2 style="color: #04c0efd4;">FaceCare</h2>
+                    <div class="flex items-center gap-20">
+                      <div class="line-green"></div>
+                      <p>AI-Powered Skin Condition Detection and Skincare Advice</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          <!-- Column 4 -->
+          <div class="col-2sm" data-aos="fade-left">
+            <a href="https://pyaelinn01.github.io/One-Fashion-Shop-Website-Design/" target="_blank" class="project-link">
+              <div class="project">
+                <img
+                  src="images/one.png"
+                  alt="project-img"
+                  class="project-img"
+                />
+                <div class="overlay">
+                  <div>
+                    <h2 style="color: #04c0efd4;">One Fashion Shop</h2>
+                    <div class="flex items-center gap-20">
+                      <div class="line-green"></div>
+                      <p>Website Design</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Column 5 -->
+          <div class="col-2sm" data-aos="fade-right">
+            <a href="https://github.com/PyaeLinn01/HealthCare-System-JEE" target="_blank" class="project-link">
+              <div class="project">
+                <img
+                  src="images/health.png"
+                  alt="project-img"
+                  class="project-img"
+                />
+                <div class="overlay">
+                  <div>
+                    <h2 style="color: #04c0efd4;">HealthCare System </h2>
+                    <div class="flex items-center gap-20">
+                      <div class="line-green"></div>
+                      <p>JEE Web Application</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+                    <!-- Column 4 -->
+          <div class="col-2sm" data-aos="fade-left">
+            <a href="https://github.com/PyaeLinn01/Coffee_Shop_Website" target="_blank" class="project-link">
+              <div class="project">
+                <img
+                  src="images/coffee.png"
+                  alt="project-img"
+                  class="project-img"
+                />
+                <div class="overlay">
+                  <div>
+                    <h2 style="color: #04c0efd4;">Espresso ButterCup</h2>
+                    <div class="flex items-center gap-20">
+                      <div class="line-green"></div>
+                      <p>PHP Web Application</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-2sm" data-aos="fade-right">
+            <a href="https://github.com/PyaeLinn01/Text-to-Image-Generator" target="_blank" class="project-link">
+              <div class="project">
+                <img
+                  src="images/text.jpg"
+                  alt="project-img"
+                  class="project-img"
+                />
+                <div class="overlay">
+                  <div>
+                    <h2 style="color: #04c0efd4;">Text-to-Image Generator</h2>
+                    <div class="flex items-center gap-20">
+                      <div class="line-green"></div>
+                      <p>Deep learning project designed to generate images based on textual descriptions.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+    </section>
+    
+    <!-- FOOTER  -->
+    <footer class="footer">
+      <div class="container">
+        <!-- footer top  -->
+        <div class="row">
+          <!-- column 1 -->
+          <div class="col-3" data-aos="fade-right">
+            <div class="flex gap-20">
+              <!-- icon -->
+              <div class="footer-icon">
+                <i class="bx bx-location-plus"></i>
+              </div>
+              <!-- text -->
+              <div>
+                <h4 class="footer-title">Address</h4>
+                <p class="my-20">
+                  Pazundaung, Yangon | Myanmar
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-3" data-aos="fade-up">
+            <div class="flex gap-20">
+              <!-- icon -->
+              <div class="footer-icon">
+                <i class="bx bx-phone-call"></i>
+              </div>
+              <!-- text -->
+              <div>
+                <h4 class="footer-title">Lets talk us</h4>
+                <div class="my-20">
+                  <p class="primary-hover">+959 420053538</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- column 3 -->
+          <div class="col-3" data-aos="fade-left">
+            <div class="flex gap-20">
+              <!-- icon -->
+              <div class="footer-icon">
+                <i class="bx bx-envelope"></i>
+              </div>
+              <!-- text -->
+              <div>
+                <h4 class="footer-title">Send us email</h4>
+                <div class="my-20">
+                  <a href="https://mail.google.com/mail/u/0/#search/in%3Asent+pltlosgot%40gmail.com?compose=new" target="_blank" class="social-link">
+                    <p class="primary-hover">pltlosgot@gmail.com</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- line break -->
+        <div class="my-20 border-gray" data-aos="fade-up"></div>
+        <!-- footer bottom  -->
+        <div class="row">
+          <!-- column 1 -->
+          <div class="col-2">
+            <div class="row">
+            <p>&#169; Pyae Linn Portfolio | All Rights Reserved</p>
+            </div>
+          </div>
+          <!-- column 2 -->
+          <div class="col-2">
+            <div class="row">
+              <p class="primary-hover">Trams & Condition</p>
+              <p class="primary-hover">Privacy Policy</p>
+              <p class="primary-hover">Sitemap</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- CONTACT OVERLAY  -->
+    <div class="contact-overlay fade"></div>
+    <!-- LOADING -->
+    <div class="loading">
+      <div class="loader"></div>
+    </div>
+    <!-- Animate On Scroll Library JS Link  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- local js link  -->
+    <script src="index.js"></script>
+  </body>
+</html>
