@@ -204,7 +204,71 @@
   .skill-item[data-category="other"] {
     display: block; /* Show relevant items when active */
   }
-  
+
+/* Responsive Skills Grid */
+@media screen and (max-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px; /* Reduce gap slightly for smaller screens */
+  }
+
+  .skill-item {
+    height: 90px; /* Adjust height */
+    width: 90px; /* Adjust width */
+  }
+
+  .skill-item img {
+    width: 50px; /* Reduce icon size for smaller screens */
+    height: 50px;
+  }
+
+  .skill-item p {
+    font-size: 0.9rem; /* Slightly smaller text */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Compact layout */
+    gap: 10px;
+  }
+
+  .skill-item {
+    height: 80px;
+    width: 80px;
+  }
+
+  .skill-item img {
+    width: 40px; /* Further reduce icon size */
+    height: 40px;
+  }
+
+  .skill-item p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    gap: 8px; /* Minimal gap for small screens */
+  }
+
+  .skill-item {
+    height: 70px;
+    width: 70px;
+  }
+
+  .skill-item img {
+    width: 35px; /* Reduce icon size for very small screens */
+    height: 35px;
+  }
+
+  .skill-item p {
+    font-size: 0.7rem; /* Smallest text size */
+  }
+}
+
   
 /* Music button styling */
 .toggle-music {
