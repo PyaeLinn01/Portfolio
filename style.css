@@ -178,6 +178,7 @@
   /* Skill Categories */
   .skill-categories {
     display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
     justify-content: center;
     gap: 15px;
     margin-bottom: 30px;
@@ -198,11 +199,10 @@
     background-color: #00bcd4;
   }
   
-
   /* Skills Grid */
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Automatically adjust columns */
     gap: 20px;
   }
   
@@ -210,77 +210,55 @@
     background-color: #222; /* Dark background */
     border-radius: 10px;
     padding: 20px;
-    display: flex; /* Enable flex for alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    transition: transform 0.3s ease;
-    height: 100px; /* Ensures uniform height for all items */
-    width: 100px; /* Ensures uniform width for all items */
+    display: flex;
+    flex-direction: column; /* Align icon and text vertically */
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    height: 120px; /* Consistent size */
+  }
+  
+  .skill-item:hover {
+    transform: scale(1.05);
+    background-color: #00bcd4; /* Highlight on hover */
   }
   
   .skill-item img {
-    width: 60px; /* Icon width */
-    height: 60px; /* Icon height */
-    margin: 0; /* Remove unnecessary margins */
+    width: 60px; /* Icon size */
+    height: 60px;
+    margin-bottom: 10px; /* Space between icon and text */
   }
-  
   
   .skill-item p {
     font-size: 1rem;
     color: #fff;
+    text-align: center;
   }
   
-  .skill-item:hover {
-    transform: translateY(-10px);
-  }
-  
-  /* Hidden skills for filtering */
-  .skill-item {
-    display: none; /* Initially hide all items */
-  }
-  
-  .skill-item[data-category="all"],
-  .skill-item[data-category="frontend"],
-  .skill-item[data-category="backend"],
-  .skill-item[data-category="databases"],
-  .skill-item[data-category="other"] {
-    display: block; /* Show relevant items when active */
-  }              
-
   /* Responsive Skills Section */
-
-/* For Tablets and Medium Devices (Max-width: 768px) */
-@media screen and (max-width: 768px) {
+  
+  /* For Tablets and Medium Devices (Max-width: 768px) */
+  @media screen and (max-width: 768px) {
     #skills .section-title {
       font-size: 1.8rem; /* Slightly smaller title */
     }
   
     #skills .section-description {
-      font-size: 1rem; /* Adjusted description font size */
-      margin-bottom: 20px; /* Reduced margin */
-    }
-  
-    .skill-categories {
-      flex-wrap: wrap; /* Allow categories to wrap on smaller screens */
-      gap: 10px; /* Reduce spacing between buttons */
-    }
-  
-    .category-btn {
-      padding: 8px 15px; /* Smaller padding for buttons */
-      font-size: 0.9rem; /* Adjust button font size */
+      font-size: 1rem;
+      margin-bottom: 20px;
     }
   
     .skills-grid {
-      gap: 15px; /* Reduce grid gap for smaller screens */
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+      gap: 15px;
     }
   
     .skill-item {
-      height: 90px; /* Adjust size of skill items */
-      width: 90px;
+      height: 100px; /* Adjust size of skill items */
     }
   
     .skill-item img {
-      width: 50px; /* Smaller icon size */
+      width: 50px;
       height: 50px;
     }
   
@@ -292,41 +270,38 @@
   /* For Mobile Devices (Max-width: 480px) */
   @media screen and (max-width: 480px) {
     #skills {
-      padding: 30px 10px; /* Reduce padding for small screens */
+      padding: 30px 10px;
     }
   
     #skills .section-title {
-      font-size: 1.5rem; /* Further reduce title font size */
+      font-size: 1.6rem;
+      margin-bottom: 10px;
     }
   
     #skills .section-description {
-      font-size: 0.9rem; /* Smaller description font size */
+      font-size: 0.9rem;
+      margin-bottom: 15px;
     }
   
     .skills-grid {
-      grid-template-columns: repeat(2, 1fr); /* Display two columns for better layout */
-      gap: 10px; /* Smaller gap between items */
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+      gap: 10px;
     }
   
     .skill-item {
-      height: 80px; /* Smaller skill items */
-      width: 80px;
+      height: 90px; /* Smaller skill items */
     }
   
     .skill-item img {
-      width: 40px; /* Reduce icon size further */
+      width: 40px;
       height: 40px;
     }
   
     .skill-item p {
-      font-size: 0.8rem; /* Reduce font size for skill names */
-    }
-  
-    .category-btn {
-      padding: 5px 10px; /* Adjust button padding */
-      font-size: 0.8rem; /* Smaller button font */
+      font-size: 0.8rem; /* Adjust font size */
     }
   }
+  
   
   
 /* Music button styling */
