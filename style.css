@@ -115,6 +115,47 @@
     transform: scale(0.95); /* Click animation effect */
   }
  
+/* Responsive Buttons Styling */
+
+/* For Tablets and Medium Devices (Max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .toggle-links,
+    .toggle-contact-right-bar {
+      width: 40px; /* Smaller button size */
+      height: 40px;
+    }
+  
+    .menu-bar {
+      width: 25px; /* Smaller menu bar size */
+      height: 3px;
+    }
+  
+    .cool-button {
+      padding: 8px 16px; /* Adjust button padding */
+      font-size: 16px; /* Slightly smaller font */
+    }
+  }
+  
+  /* For Mobile Devices (Max-width: 480px) */
+  @media screen and (max-width: 480px) {
+    .toggle-links,
+    .toggle-contact-right-bar {
+      width: 35px; /* Further reduce button size for smaller screens */
+      height: 35px;
+    }
+  
+    .menu-bar {
+      width: 20px; /* Reduce menu bar size */
+      height: 2.5px;
+    }
+  
+    .cool-button {
+      padding: 6px 12px; /* Smaller padding for compact layout */
+      font-size: 14px; /* Smaller font size */
+    }
+  }
+  
+
 /* General Section Styling */
 #skills {
     background-color: #111;
@@ -205,7 +246,88 @@
   .skill-item[data-category="other"] {
     display: block; /* Show relevant items when active */
   }              
-   
+
+  /* Responsive Skills Section */
+
+/* For Tablets and Medium Devices (Max-width: 768px) */
+@media screen and (max-width: 768px) {
+    #skills .section-title {
+      font-size: 1.8rem; /* Slightly smaller title */
+    }
+  
+    #skills .section-description {
+      font-size: 1rem; /* Adjusted description font size */
+      margin-bottom: 20px; /* Reduced margin */
+    }
+  
+    .skill-categories {
+      flex-wrap: wrap; /* Allow categories to wrap on smaller screens */
+      gap: 10px; /* Reduce spacing between buttons */
+    }
+  
+    .category-btn {
+      padding: 8px 15px; /* Smaller padding for buttons */
+      font-size: 0.9rem; /* Adjust button font size */
+    }
+  
+    .skills-grid {
+      gap: 15px; /* Reduce grid gap for smaller screens */
+    }
+  
+    .skill-item {
+      height: 90px; /* Adjust size of skill items */
+      width: 90px;
+    }
+  
+    .skill-item img {
+      width: 50px; /* Smaller icon size */
+      height: 50px;
+    }
+  
+    .skill-item p {
+      font-size: 0.9rem; /* Slightly smaller text */
+    }
+  }
+  
+  /* For Mobile Devices (Max-width: 480px) */
+  @media screen and (max-width: 480px) {
+    #skills {
+      padding: 30px 10px; /* Reduce padding for small screens */
+    }
+  
+    #skills .section-title {
+      font-size: 1.5rem; /* Further reduce title font size */
+    }
+  
+    #skills .section-description {
+      font-size: 0.9rem; /* Smaller description font size */
+    }
+  
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr); /* Display two columns for better layout */
+      gap: 10px; /* Smaller gap between items */
+    }
+  
+    .skill-item {
+      height: 80px; /* Smaller skill items */
+      width: 80px;
+    }
+  
+    .skill-item img {
+      width: 40px; /* Reduce icon size further */
+      height: 40px;
+    }
+  
+    .skill-item p {
+      font-size: 0.8rem; /* Reduce font size for skill names */
+    }
+  
+    .category-btn {
+      padding: 5px 10px; /* Adjust button padding */
+      font-size: 0.8rem; /* Smaller button font */
+    }
+  }
+  
   
 /* Music button styling */
 .toggle-music {
@@ -319,49 +441,49 @@ a {
 /* Scroll Up Button Style */
 .scroll-up-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px;  /* Distance from the right */
     background-color: #3498db;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
+    width: 50px; /* Button size */
     height: 50px;
     font-size: 24px;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    display: none;
+    display: flex; /* Ensures proper alignment */
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    transition: opacity 0.3s, transform 0.3s;
-  }
-  
-  .scroll-up-btn:hover {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* Prevents overflow issues */
+}
+
+/* Hover Effect */
+.scroll-up-btn:hover {
     background-color: #2980b9;
     transform: scale(1.1);
-  }
+}
 
-  /* Responsive Scroll Up Button */
+/* Ensure it stays inside viewport */
+html, body {
+    margin: 0; /* Removes extra margins */
+    padding: 0; /* Removes extra paddings */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Responsive Design for Smaller Devices */
 @media screen and (max-width: 768px) {
     .scroll-up-btn {
-      width: 45px; /* Slightly smaller button */
-      height: 45px;
-      font-size: 20px; /* Adjust icon size */
-      bottom: 15px; /* Reduce bottom spacing */
-      right: 15px;
+        bottom: 10px; /* Adjust bottom spacing */
+        right: 10px;  /* Adjust right spacing */
+        width: 45px;  /* Reduce size for small devices */
+        height: 45px;
+        font-size: 20px;
     }
-  }
-  
-  @media screen and (max-width: 480px) {
-    .scroll-up-btn {
-      width: 40px; /* Further reduce button size for small devices */
-      height: 40px;
-      font-size: 18px; /* Adjust icon size for smaller screens */
-      bottom: 10px; /* Reduce spacing */
-      right: 10px;
-    }
-  }
+}
+
   
   
 
@@ -1213,6 +1335,8 @@ button.toggle-contact-right-bar {
 .footer .footer-icon i {
     font-size: 40px;
 }
+
+
 
 /* ============================= @MEDIA QUERY | RESPONSIVE STYLE ============================= */
 
