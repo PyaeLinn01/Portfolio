@@ -157,6 +157,7 @@
     background-color: #00bcd4;
   }
   
+
   /* Skills Grid */
   .skills-grid {
     display: grid;
@@ -203,72 +204,8 @@
   .skill-item[data-category="databases"],
   .skill-item[data-category="other"] {
     display: block; /* Show relevant items when active */
-  }
-
-/* Responsive Skills Grid */
-@media screen and (max-width: 1200px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 15px; /* Reduce gap slightly for smaller screens */
-  }
-
-  .skill-item {
-    height: 90px; /* Adjust height */
-    width: 90px; /* Adjust width */
-  }
-
-  .skill-item img {
-    width: 50px; /* Reduce icon size for smaller screens */
-    height: 50px;
-  }
-
-  .skill-item p {
-    font-size: 0.9rem; /* Slightly smaller text */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Compact layout */
-    gap: 10px;
-  }
-
-  .skill-item {
-    height: 80px;
-    width: 80px;
-  }
-
-  .skill-item img {
-    width: 40px; /* Further reduce icon size */
-    height: 40px;
-  }
-
-  .skill-item p {
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
-    gap: 8px; /* Minimal gap for small screens */
-  }
-
-  .skill-item {
-    height: 70px;
-    width: 70px;
-  }
-
-  .skill-item img {
-    width: 35px; /* Reduce icon size for very small screens */
-    height: 35px;
-  }
-
-  .skill-item p {
-    font-size: 0.7rem; /* Smallest text size */
-  }
-}
-
+  }              
+   
   
 /* Music button styling */
 .toggle-music {
@@ -403,6 +340,27 @@ a {
   .scroll-up-btn:hover {
     background-color: #2980b9;
     transform: scale(1.1);
+  }
+
+  /* Responsive Scroll Up Button */
+@media screen and (max-width: 768px) {
+    .scroll-up-btn {
+      width: 45px; /* Slightly smaller button */
+      height: 45px;
+      font-size: 20px; /* Adjust icon size */
+      bottom: 15px; /* Reduce bottom spacing */
+      right: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .scroll-up-btn {
+      width: 40px; /* Further reduce button size for small devices */
+      height: 40px;
+      font-size: 18px; /* Adjust icon size for smaller screens */
+      bottom: 10px; /* Reduce spacing */
+      right: 10px;
+    }
   }
   
   
@@ -1123,27 +1081,7 @@ button.toggle-contact-right-bar {
     text-align: center;
 }
 
-/* ============================= EDUCATION & SKILL STYLES ============================= */
-.education-skill {
-    background-color: var(--bgColor);
-}
 
-.skill {
-    background-color: var(--grayColor);
-}
-
-.skill-text {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--colorWhite);
-    letter-spacing: .8px;
-    padding: 20px;
-}
-
-.skill-progress {
-    height: 4px;
-    background-color: var(--primaryColor);
-}
 
 /* ============================= PROJECTS STYLES ============================= */
 .project {
@@ -1247,40 +1185,7 @@ button.toggle-contact-right-bar {
     color: var(--colorWhite);
 }
 
-/* ============================= NEWSLETTER STYLES ============================= */
-.newsletter {
-    height: 500px;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('images/newsletter.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
 
-.newsletter-content {
-    display: flex;
-    height: 500px;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.newsletter-content .newsletter-form {
-    padding: 10px;
-    border: 1px solid var(--primaryColor);
-    margin: 0 auto;
-    width: 50%;
-    position: relative;
-}
-
-.newsletter-content .newsletter-form input {
-    border: none;
-}
-
-.newsletter-content .newsletter-form button {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
 
 /* ============================= FOOTER STYLES ============================= */
 .footer {
