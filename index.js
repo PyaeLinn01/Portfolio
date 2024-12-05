@@ -139,7 +139,6 @@ window.addEventListener("load", () => {
 
 var typed = new Typed(".typing", {
   strings: [
-    "I'm Pyae Linn",
     "A passionate computer science student",
     "An AI and machine learning enthusiast",
     "A creative problem solver",
@@ -147,7 +146,7 @@ var typed = new Typed(".typing", {
     "Focused on Smart Retail Systems",
     "A tech enthusiast and gamer",
     "Loves building impactful web applications",
-    "Creator of mental support chatbots",
+    "Creator of mental support chatbot",
     "Dedicated to crafting user-friendly experiences",
     "An aspiring computer vision developer",
     "Always exploring new possibilities in tech",
