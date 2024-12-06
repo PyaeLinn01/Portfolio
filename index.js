@@ -130,11 +130,14 @@ function toggleContact() {
   contactOverlay.classList.toggle("show");
 }
 // loading
+// Wait for the window to load
 window.addEventListener("load", () => {
+  const loading = document.querySelector(".loading");
   setTimeout(() => {
-    loading.classList.toggle("hide");
-  }, 1000);
+    loading.classList.toggle("hide"); // Hide the loading screen
+  }, 2000); // Show the loader for 2 seconds
 });
+
 
 
 var typed = new Typed(".typing", {
