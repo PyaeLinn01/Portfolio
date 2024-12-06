@@ -483,21 +483,29 @@ body {
     overflow-x: hidden;
 }
 
-/* SCROLL BAR DESIGN */
+/* SCROLLBAR DESIGN */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px; /* Narrow scrollbar width */
+    height: 50px; /* Shorter scrollbar length */
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--bodyBg);
+    background: var(--bodyBg); /* Match with your design theme */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--grayColor);
-    border-radius: 10px;
+    background: var(--primaryColor); /* Scrollbar thumb color */
+    border-radius: 5px; /* Rounded edges */
 }
+
+/* Shorten the scrollbar on vertical scroll areas */
+body {
+    scrollbar-width: thin; /* For Firefox compatibility */
+    scrollbar-color: var(--primaryColor) var(--bodyBg);
+}
+
 
 /* OTHER CLASSES AND ELEMENTS  */
 /* CONTAINERS  */
@@ -848,6 +856,7 @@ textarea {
 }
 
 /* ============================= LOADER STYLE ============================= */
+/* General Loading Styles */
 .loading {
     position: fixed;
     top: 0;
@@ -860,7 +869,7 @@ textarea {
     justify-content: center;
     transform: translateY(0);
     pointer-events: auto;
-    transition: transform .5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     z-index: 9999;
 }
 
@@ -869,33 +878,65 @@ textarea {
     pointer-events: none;
 }
 
-.loading .loader {
-    display: inline-block;
-    height: 80px;
-    width: 80px;
+/* Rocket Loader */
+.loader {
+    position: relative;
+    width: 50px;
+    height: 150px;
+    animation: moveUp 2s ease-in-out infinite;
 }
 
-.loading .loader::after {
-    content: ' ';
-    display: block;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 6px solid var(--primaryColor);
-    border-color: var(--primaryColor) transparent var(--primaryColor) transparent;
-    margin: 8px;
-    animation: spinnerLoader 1.2s linear infinite;
+/* Rocket Body */
+.loader .rocket {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 60px;
+    background-color: var(--primaryColor);
+    border-radius: 50% 50% 0 0;
+    clip-path: polygon(50% 0%, 100% 100%, 0 100%);
+    box-shadow: 0 0 10px var(--primaryColor), 0 0 20px var(--primaryColor);
 }
 
-@keyframes spinnerLoader {
+/* Rocket Trail */
+.loader .trail {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 150px;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.2), var(--primaryColor));
+    filter: blur(3px);
+    z-index: -1;
+    animation: flicker 0.2s infinite alternate;
+}
+
+/* Keyframes for Rocket Movement */
+@keyframes moveUp {
     0% {
-        transform: rotate(0deg);
+        transform: translateY(0);
     }
-
+    50% {
+        transform: translateY(-20px);
+    }
     100% {
-        transform: rotate(360deg);
+        transform: translateY(0);
     }
 }
+
+/* Keyframes for Trail Flicker */
+@keyframes flicker {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /* ====================================== NAVBAR STYLES ====================================== */
 .navbar {
