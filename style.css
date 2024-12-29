@@ -484,27 +484,57 @@ body {
 }
 
 /* SCROLLBAR DESIGN */
+/* Default Scrollbar */
 ::-webkit-scrollbar {
     width: 5px; /* Narrow scrollbar width */
     height: 50px; /* Shorter scrollbar length */
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: var(--bodyBg); /* Match with your design theme */
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--primaryColor); /* Scrollbar thumb color */
+    background-color: var(--primaryColor) !important; /* Ensure the thumb color is applied */
     border-radius: 5px; /* Rounded edges */
 }
 
-/* Shorten the scrollbar on vertical scroll areas */
 body {
     scrollbar-width: thin; /* For Firefox compatibility */
-    scrollbar-color: var(--primaryColor) var(--bodyBg);
+    scrollbar-color: var(--primaryColor) var(--bodyBg); /* Primary color and track background */
 }
+
+/* Responsive Scrollbar Design */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--primaryColor) !important; /* Ensure thumb color on smaller screens */
+        border-radius: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--primaryColor) !important; /* Force thumb color for mobile */
+        border-radius: 2px;
+    }
+}
+
+/* Fallback for iOS Safari and other browsers that ignore custom scrollbars */
+html, body {
+    overflow: overlay;
+}
+
+
+
+
 
 
 /* OTHER CLASSES AND ELEMENTS  */
