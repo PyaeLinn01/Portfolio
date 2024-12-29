@@ -483,16 +483,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Default Scrollbar Design */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: var(--bodyBg);
-    overflow-x: hidden;
-}
-
 /* SCROLLBAR DESIGN */
 ::-webkit-scrollbar {
     width: 5px; /* Narrow scrollbar width */
@@ -515,7 +505,6 @@ body {
     scrollbar-width: thin; /* For Firefox compatibility */
     scrollbar-color: var(--primaryColor) var(--bodyBg);
 }
-
 
 
 /* OTHER CLASSES AND ELEMENTS  */
