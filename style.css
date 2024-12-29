@@ -483,57 +483,55 @@ body {
     overflow-x: hidden;
 }
 
-/* SCROLLBAR DESIGN */
-/* Default Scrollbar */
+/* Default Scrollbar Design */
 ::-webkit-scrollbar {
-    width: 5px; /* Narrow scrollbar width */
-    height: 50px; /* Shorter scrollbar length */
+    width: 5px; /* Default scrollbar width */
+    height: 50px; /* Default horizontal scrollbar height */
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bodyBg); /* Match with your design theme */
+    background-color: var(--bodyBg); /* Track background color */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--primaryColor) !important; /* Ensure the thumb color is applied */
-    border-radius: 5px; /* Rounded edges */
+    background-color: var(--primaryColor) !important; /* Thumb color with high priority */
+    border-radius: 5px; /* Rounded scrollbar edges */
 }
 
+/* Firefox Compatibility */
 body {
-    scrollbar-width: thin; /* For Firefox compatibility */
-    scrollbar-color: var(--primaryColor) var(--bodyBg); /* Primary color and track background */
+    scrollbar-width: thin; /* Use thin scrollbar in Firefox */
+    scrollbar-color: var(--primaryColor) var(--bodyBg); /* Thumb and track colors */
 }
 
-/* Responsive Scrollbar Design */
+/* Responsive Scrollbar for Devices */
 @media (max-width: 768px) {
     ::-webkit-scrollbar {
-        width: 4px;
+        width: 4px; /* Narrower scrollbar for tablets */
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: var(--primaryColor) !important; /* Ensure thumb color on smaller screens */
-        border-radius: 3px;
+        background-color: var(--primaryColor) !important; /* Ensure thumb color for tablets */
+        border-radius: 4px; /* Adjust border-radius */
     }
 }
 
 @media (max-width: 480px) {
     ::-webkit-scrollbar {
-        width: 3px;
+        width: 3px; /* Thinner scrollbar for smaller screens */
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: var(--primaryColor) !important; /* Force thumb color for mobile */
-        border-radius: 2px;
+        background-color: var(--primaryColor); /* Ensure thumb color for mobile */
+        border-radius: 3px; /* Adjust border-radius for smaller screens */
     }
 }
 
-/* Fallback for iOS Safari and other browsers that ignore custom scrollbars */
+/* Fallback for Mobile Browsers (iOS Safari, etc.) */
 html, body {
-    overflow: overlay;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    overflow: overlay; /* Allow overlay scrolling on modern browsers */
 }
-
-
-
 
 
 
