@@ -484,53 +484,36 @@ body {
 }
 
 /* Default Scrollbar Design */
-::-webkit-scrollbar {
-    width: 5px; /* Default scrollbar width */
-    height: 50px; /* Default horizontal scrollbar height */
+html {
+    scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar-track {
-    background-color: var(--bodyBg); /* Track background color */
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--primaryColor) !important; /* Thumb color with high priority */
-    border-radius: 5px; /* Rounded scrollbar edges */
-}
-
-/* Firefox Compatibility */
 body {
-    scrollbar-width: thin; /* Use thin scrollbar in Firefox */
-    scrollbar-color: var(--primaryColor) var(--bodyBg); /* Thumb and track colors */
+    background: var(--bodyBg);
+    overflow-x: hidden;
 }
 
-/* Responsive Scrollbar for Devices */
-@media (max-width: 768px) {
-    ::-webkit-scrollbar {
-        width: 4px; /* Narrower scrollbar for tablets */
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--primaryColor) !important; /* Ensure thumb color for tablets */
-        border-radius: 4px; /* Adjust border-radius */
-    }
+/* SCROLLBAR DESIGN */
+::-webkit-scrollbar {
+    width: 5px; /* Narrow scrollbar width */
+    height: 50px; /* Shorter scrollbar length */
 }
 
-@media (max-width: 480px) {
-    ::-webkit-scrollbar {
-        width: 3px; /* Thinner scrollbar for smaller screens */
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--primaryColor); /* Ensure thumb color for mobile */
-        border-radius: 3px; /* Adjust border-radius for smaller screens */
-    }
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--bodyBg); /* Match with your design theme */
 }
 
-/* Fallback for Mobile Browsers (iOS Safari, etc.) */
-html, body {
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-    overflow: overlay; /* Allow overlay scrolling on modern browsers */
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primaryColor); /* Scrollbar thumb color */
+    border-radius: 5px; /* Rounded edges */
+}
+
+/* Shorten the scrollbar on vertical scroll areas */
+body {
+    scrollbar-width: thin; /* For Firefox compatibility */
+    scrollbar-color: var(--primaryColor) var(--bodyBg);
 }
 
 
